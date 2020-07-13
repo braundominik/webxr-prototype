@@ -44,8 +44,8 @@ export const ATTRIB_MASK = {
 
 const GL = WebGLRenderingContext; // For enums
 
-const DEF_LIGHT_DIR = new Float32Array([-0.1, -1.0, 20]);
-const DEF_LIGHT_COLOR = new Float32Array([10.0, 10.0, 10.0]);
+const DEF_LIGHT_DIR = new Float32Array([0, 0, 20]);
+const DEF_LIGHT_COLOR = new Float32Array([5.0, 5.0, 5.0]);
 
 const PRECISION_REGEX = new RegExp('precision (lowp|mediump|highp) float;');
 
