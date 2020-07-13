@@ -163,11 +163,11 @@ function onSelect(event) {
 }
 
 function onInputChange(event) {
-    console.log("select event");
+    /* console.log("select event"); */
     let source = event.inputSource;
     let targetRayPose = event.frame.getPose(source.targetRaySpace, source.targetRaySpace);
-    console.log(source);
-    console.log(targetRayPose);
+    /* console.log(source);
+    console.log(targetRayPose); */
 }
 
 // Called every time a XRSession requests that a new frame be drawn.
@@ -185,6 +185,25 @@ function onXRFrame(t, frame) {
             let pose = hitTestResults[0].getPose(xrRefSpace);
             reticle.visible = true;
             reticle.matrix = pose.transform.matrix;
+            /* reticle.matrix[15] = 0; */
+
+            /* if (reticle.matrix[0] <= 0) {
+                reticle.matrix[0] = reticle.matrix[0] * (-1);
+            }
+
+            if (reticle.matrix[10] <= 0) {
+                reticle.matrix[10] = reticle.matrix[10] * (-1);
+            } */
+            
+
+            /* console.log("Rotation");
+            console.log(reticle._rotation);
+            console.log("RETICLE");
+            console.log(reticle);
+            console.log("RETICLE MATRIX");
+            console.log(reticle.matrix); */
+
+
             if (lamps.length == MAX_LAMPS) {
                 reticle.visible = false;
             }
